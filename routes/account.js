@@ -40,7 +40,6 @@ router.post("/signup", (req, res) => {
 
 router.post("/login", async (req, res) => {
     let user = await db.checkForUser(req.body.email)
-    let hasLoginSucceeded = false
     let passwordCompare = new Promise((resolve, reject) => {
         if (user) {
             bcrypt.compare(req.body.password, user.password, (err, same) => {
@@ -53,7 +52,10 @@ router.post("/login", async (req, res) => {
             })
         } else resolve(false);
         setTimeout(() => {
-            reject("An error occured while verifying password.")
+            let today = new Date();
+            let time = `UTC ${today.getUTCHours}:${today.getUTCMinutes}:${today.getUTCSeconds} | ${today.getFullYear}-${today.getMonth}-${today.getDate}`
+
+            reject(`An error occurred while verifying password for user ${user.email}. \n ${time}`)
         }, 1000)
     })
 
