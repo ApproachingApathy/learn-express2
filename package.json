@@ -1,0 +1,29 @@
+{
+  "name": "learn-express2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bcrypt": "^3.0.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "pg-promise": "^9.3.3",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ApproachingApathy/learn-express2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ApproachingApathy/learn-express2/issues"
+  },
+  "homepage": "https://github.com/ApproachingApathy/learn-express2#readme"
+}
